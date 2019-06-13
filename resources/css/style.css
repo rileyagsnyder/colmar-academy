@@ -36,12 +36,13 @@ padding-right: 24px;
   margin-right: 0;
 }
 
-.header ul li a {
+a {
   text-decoration: none;
   color: gray;
 }
 
-.header ul li a:hover {
+
+a:hover {
   color: darkred;
   transition-property: color;
   transition-duration: 400ms;
@@ -93,8 +94,7 @@ padding-right: 24px;
 .main {
   width: 100%;
   display: flex;
-  margin-top: 32px;
-  margin-left: 24px;
+  margin: 32px 24px;
 }
 
 .main .information {
@@ -107,6 +107,10 @@ padding-right: 24px;
   padding: 16px;
   border: 1px solid #ccc;
   align-items: center;
+}
+
+.main .overview > div:last-child {
+  background: silver;
 }
 
 .main .overview > div img {
@@ -161,4 +165,158 @@ padding-right: 24px;
 
 .learning .content h2 {
   margin: 0;
+}
+
+.media {
+  padding: 32px 24px;
+}
+
+.media > .content {
+  display: flex;
+}
+
+.media h1 {
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.media .video {
+  width: 60%;
+  margin-right: 24px;
+}
+
+.media .video video {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.media .video h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+}
+
+.media .overview > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 16px;
+}
+
+.media .overview > div h2 {
+  margin-top: 0;
+}
+
+.media .overview > div:first-child {
+  background: silver;
+}
+
+.media .overview > div img {
+  width: 35%;
+  margin-right: 16px;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  padding: 16px 24px;
+}
+
+.footer p {
+  margin: 0;
+  display: inline-block;
+}
+
+.footer ul {
+  float: right;
+  list-style-type: none;
+  margin:  0;
+  padding: 0;
+}
+
+.footer ul li { display: inline-block; }
+.footer ul li a { text-decoration: none; }
+
+@media only screen and (max-width: 600px) {
+  .header nav {
+    display: none;
+    background-color: lightblue;
+  }
+
+  .header .logo h2 {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
+
+  .hero .banner-img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .hero .button {
+    width: 100%;
+  }
+
+  .main .information {
+    display: none;
+  }
+
+  .main .overview > div {
+    flex-direction: column;
+    border: none;
+  }
+
+  .main .overview > div img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .main .overview .content {
+    width: 100%;
+  }
+
+  .main .overview > div {
+    width: 100%;
+  }
+
+  .learning {
+    background: white;
+  }
+
+  .learning .content {
+      margin: 0;
+      flex-direction: column;
+  }
+
+  .learning .content > div {
+    width: 100%;
+    background: silver;
+  }
+
+  .learning .content > div:hover {
+    background-color: darkred;
+    transition-property: background-color;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    transition-delay: 200ms;
+  }
+
+  .learning .content > div img {
+    display: none;
+  }
+  .learning .content > div p {
+    display: none;
+  }
+  .media .video { width: 100%; }
+  .media .video h2 { display: none; }
+  .media .video p { display: none; }
+  .media .overview { display: none; }
+
+  .footer ul {
+    display: none;
+  }
 }
